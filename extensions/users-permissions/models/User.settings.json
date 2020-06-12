@@ -57,7 +57,9 @@
       "type": "string"
     },
     "githubID": {
-      "type": "integer"
+      "type": "integer",
+      "unique": true,
+      "required": false
     }
   }
 }
