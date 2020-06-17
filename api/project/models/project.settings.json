@@ -29,6 +29,7 @@
       "required": false
     },
     "author": {
+      "via": "projects",
       "plugin": "users-permissions",
       "model": "user"
     },

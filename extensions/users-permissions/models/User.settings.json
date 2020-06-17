@@ -60,6 +60,30 @@
       "type": "integer",
       "unique": true,
       "required": false
+    },
+    "projects": {
+      "collection": "project",
+      "via": "author"
+    },
+    "biography": {
+      "type": "richtext"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "location": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

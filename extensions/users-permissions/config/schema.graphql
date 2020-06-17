@@ -1,0 +1,19 @@
+module.exports = {
+  definition: `
+    extend type UsersPermissionsMe {
+      githubID: Int,
+      githubUsername: String,
+      projects: [Project]
+    }
+  `,
+    query: `
+    self: UsersPermissionsUser
+  `,
+  resolver: {
+    Query: {
+      self: {
+        resolver: 'plugins::users-permissions.user.me'
+      },
+    },
+  }
+}
