@@ -62,8 +62,8 @@
       "required": false
     },
     "projects": {
-      "collection": "project",
-      "via": "author"
+      "via": "author",
+      "collection": "project"
     },
     "biography": {
       "type": "richtext"

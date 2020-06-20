@@ -16,7 +16,7 @@
     },
     "projects": {
       "via": "technologies",
-      "model": "project"
+      "collection": "project"
     },
     "image": {
       "model": "file",

@@ -29,9 +29,9 @@
       "required": false
     },
     "author": {
-      "via": "projects",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "projects"
     },
     "demoUrl": {
       "type": "string"
@@ -41,7 +41,8 @@
     },
     "technologies": {
       "collection": "technologies",
-      "via": "projects"
+      "via": "projects",
+      "dominant": true
     }
   }
 }
