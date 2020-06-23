@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "typeFactory.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/health-check",
+      "handler": "typeFactory.healthCheck",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

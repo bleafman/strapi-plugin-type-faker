@@ -1,0 +1,30 @@
+{
+  "name": "strapi-plugin-type-factory",
+  "version": "0.0.0",
+  "description": "A plugin to dynamically create, and insert if needed, any type that is part of the strapi instance. Useful for testing and for development.",
+  "strapi": {
+    "name": "type-factory",
+    "icon": "plug",
+    "description": "A plugin to create dynamically, and insert if needed, any type that is part of the strapi instance. Useful for testing and for development."
+  },
+  "dependencies": {
+    "faker": "^4.1.0"
+  },
+  "author": {
+    "name": "Brandon Leafman",
+    "email": "brandonleafman@gmail.com",
+    "url": "brandonleafman.com"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
