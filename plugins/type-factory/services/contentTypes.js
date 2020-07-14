@@ -11,10 +11,8 @@
  * @returns {Array.<Object>} - all content types and their schema
  */
 const getContentTypes = () => {
-
   const contentTypeService =
     strapi.plugins["content-type-builder"].services.contenttypes;
-
   // removes admin/system types
   const contentTypes = Object.keys(strapi.contentTypes)
     .filter((uid) => {
@@ -38,7 +36,7 @@ const getContentTypes = () => {
  */
 const getContentType = (apiID, plugin = undefined) => {
   // use getContentTypes to get all the contentTypes
-  // Filter the application types by apiID
+  // Filter the types by apiID
   let types = getContentTypes().filter(type => type.apiID === apiID);
   // if there is a plugin value, filter by plugin and apiID
   if (plugin) {
@@ -49,7 +47,25 @@ const getContentType = (apiID, plugin = undefined) => {
   return types.length ? types : undefined;
 };
 
+
+/**
+ * @param {string} plugin - the plugin that manages the types, if it's not content-type-builder. Ex. `user-permissions`.
+ */
+const getPluginContentTypes = (plugin) => {
+  // undefinied if no plugin provided
+  if (!plugin) {
+    return undefined;
+  }
+  // use getContentTypes to get all the contentTypes
+  // Filter the types by plugins
+  let types = getContentTypes().filter(type => type.plugin === plugin);
+
+  // return undefinied if the plugin doesn't have any types
+  return types.length ? types : undefined;
+};
+
 module.exports = {
   getContentTypes,
   getContentType,
+  getPluginContentTypes
 };

@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const { getContentTypes, getContentType } = require("../services/contentTypes");
+const { getContentTypes, getContentType, getPluginContentTypes } = require("../services/contentTypes");
 
 /**
  * type-factory.js controller
@@ -9,7 +9,6 @@ const { getContentTypes, getContentType } = require("../services/contentTypes");
  */
 
 module.exports = {
-
   /**
    * Default action.
    *
@@ -18,14 +17,31 @@ module.exports = {
 
   index: async (ctx) => {
     ctx.send({
-      message: getContentType('like')
+      message: getContentTypes(),
+    });
+  },
+  getType: async (ctx) => {
+    const {
+      params: { type, plugin },
+    } = ctx;
+
+    ctx.send({
+      message: getContentType(type, plugin),
+    });
+  },
+  getPluginTypes: async (ctx) => {
+    const {
+      params: { plugin },
+    } = ctx;
+
+    ctx.send({
+      message: getPluginContentTypes(plugin),
     });
   },
   healthCheck: async (ctx) => {
     // Send 200 `ok`
     ctx.send({
-      message: 'ok'
+      message: "ok",
     });
   },
-
 };

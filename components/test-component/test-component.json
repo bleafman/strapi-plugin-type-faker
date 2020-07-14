@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_test_component_test_components",
+  "info": {
+    "name": "testComponent",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "textComponentField": {
+      "type": "string"
+    },
+    "numberComponentField": {
+      "type": "integer"
+    },
+    "emailComponentField": {
+      "type": "email"
+    }
+  }
+}

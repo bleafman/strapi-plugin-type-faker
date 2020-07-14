@@ -10,6 +10,46 @@
     },
     {
       "method": "GET",
+      "path": "/types",
+      "handler": "typeFactory.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/types/:type?",
+      "handler": "typeFactory.getType",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plugins/:plugin/",
+      "handler": "typeFactory.getPluginTypes",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plugins/:plugin/types/",
+      "handler": "typeFactory.getPluginTypes",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plugins/:plugin/types/:type?",
+      "handler": "typeFactory.getType",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/health-check",
       "handler": "typeFactory.healthCheck",
       "config": {

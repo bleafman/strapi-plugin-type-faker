@@ -84,6 +84,10 @@
     },
     "name": {
       "type": "string"
+    },
+    "test_type": {
+      "via": "user",
+      "model": "test-type"
     }
   }
 }

@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_types",
+  "info": {
+    "name": "TestType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "textField": {
+      "type": "string"
+    },
+    "richTextField": {
+      "type": "richtext"
+    },
+    "intField": {
+      "type": "integer"
+    },
+    "decimalField": {
+      "type": "decimal"
+    },
+    "dateField": {
+      "type": "date"
+    },
+    "booleanField": {
+      "type": "boolean"
+    },
+    "emailField": {
+      "type": "email"
+    },
+    "passwordField": {
+      "type": "password"
+    },
+    "enumField": {
+      "type": "enumeration",
+      "enum": [
+        "morning",
+        "noon",
+        "night"
+      ]
+    },
+    "multiMediaField": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "singleMeidaField": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "jsonField": {
+      "type": "json"
+    },
+    "uidField": {
+      "type": "uid",
+      "targetField": "textField"
+    },
+    "like": {
+      "model": "like",
+      "via": "test_types"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "test_type"
+    },
+    "dynamicZoneField": {
+      "type": "dynamiczone",
+      "components": [
+        "test-component.test-component"
+      ]
+    }
+  }
+}

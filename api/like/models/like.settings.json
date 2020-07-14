@@ -15,6 +15,10 @@
     },
     "project": {
       "model": "project"
+    },
+    "test_types": {
+      "via": "like",
+      "collection": "test-type"
     }
   }
 }
