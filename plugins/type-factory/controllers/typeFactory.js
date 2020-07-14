@@ -1,6 +1,6 @@
 'use strict';
 
-const { getContentTypes } = require("../utils/contentTypes");
+const { getContentTypes, getContentType } = require("../services/contentTypes");
 
 /**
  * type-factory.js controller
@@ -18,7 +18,7 @@ module.exports = {
 
   index: async (ctx) => {
     ctx.send({
-      message: getContentTypes()
+      message: getContentType('like')
     });
   },
   healthCheck: async (ctx) => {
