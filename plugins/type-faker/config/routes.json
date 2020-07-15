@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/",
-      "handler": "typeFactory.index",
+      "handler": "typeFaker.index",
       "config": {
         "policies": []
       }
@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/types",
-      "handler": "typeFactory.index",
+      "handler": "typeFaker.index",
       "config": {
         "policies": []
       }
@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/types/:type?",
-      "handler": "typeFactory.getType",
+      "handler": "typeFaker.getType",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "GET",
       "path": "/plugins/:plugin/",
-      "handler": "typeFactory.getPluginTypes",
+      "handler": "typeFaker.getPluginTypes",
       "config": {
         "policies": []
       }
@@ -35,7 +35,7 @@
     {
       "method": "GET",
       "path": "/plugins/:plugin/types/",
-      "handler": "typeFactory.getPluginTypes",
+      "handler": "typeFaker.getPluginTypes",
       "config": {
         "policies": []
       }
@@ -43,7 +43,7 @@
     {
       "method": "GET",
       "path": "/plugins/:plugin/types/:type?",
-      "handler": "typeFactory.getType",
+      "handler": "typeFaker.getType",
       "config": {
         "policies": []
       }
@@ -51,7 +51,7 @@
     {
       "method": "GET",
       "path": "/health-check",
-      "handler": "typeFactory.healthCheck",
+      "handler": "typeFaker.healthCheck",
       "config": {
         "policies": []
       }
